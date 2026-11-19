@@ -49,7 +49,7 @@ def logistic(c, V, Vmax):
 
 def montroll(c, V, d, Vmax):
     """
-    Mendelsohn groeimodel.
+    Montroll groeimodel.
 
     V = huidig tumorvolume
     c = groeiparameter
@@ -60,7 +60,7 @@ def montroll(c, V, d, Vmax):
 
 def allee_effect(c, V, Vmin, Vmax):
     """
-    Mendelsohn groeimodel.
+    Alle effect groeimodel.
 
     V = huidig tumorvolume
     c = groeiparameter
