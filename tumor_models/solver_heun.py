@@ -3,19 +3,19 @@
 
 def heun_solver(model, V0, t_start, t_end, dt, parameters):
     """
-    Bereken de oplossing van een differentiaalvergelijking met behulp van de Heun-methode.
+    Bereken de oplossing van een differentiaalvergelijking met behulp van de Heun-methode
 
     Parameters
-    model = De groeifunctie die de groeisnelheid berekent.
-    V0 = Het beginvolume van de tumor.
-    t_start = Het starttijdstip van de berekening.
-    t_end = Het eindtijdstip van de berekening.
-    dt = De grootte van iedere tijdstap.
-    parameters = De parameters die het groeimodel nodig heeft.
+    model = De groeifunctie die de groeisnelheid berekent
+    V0 = Het beginvolume van de tumor
+    t_start = Het starttijdstip van de berekening
+    t_end = Het eindtijdstip van de berekening
+    dt = De grootte van iedere tijdstap
+    parameters = De parameters die het groeimodel nodig heeft
 
     Returns
-    times = De tijdstippen waarop het tumorvolume is berekend.
-    volumes = De berekende tumorvolumes op ieder tijdstip.
+    times = De tijdstippen waarop het tumorvolume is berekend
+    volumes = De berekende tumorvolumes op ieder tijdstip
     """
 
     t = t_start

@@ -1,8 +1,28 @@
 # voor de modellen/formules
 
+
+def linear(V, c):
+    """
+    Lineaire groeimodel
+
+    c = groeiparameter
+    """
+    return c
+
+
+def exponential(V, c):
+    """
+    Exponentiële groeimodel
+
+    V = huidig tumorvolume
+    c = groeiparameter
+    """
+    return c * V
+
+
 def mendelsohn_growth(V, c, d):
     """
-    Mendelsohn groeimodel.
+    Mendelsohn groeimodel
 
     V = huidig tumorvolume
     c = groeiparameter
@@ -10,26 +30,10 @@ def mendelsohn_growth(V, c, d):
     """
     return c * V**d
 
-def exponential(V, c):
-    """
-    Exponentiële groeimodel.
-
-    V = huidig tumorvolume
-    c = groeiparameter
-    """
-    return c * V
-
-def linear(V, c):
-    """
-    Lineaire groeimodel.
-
-    c = groeiparameter
-    """
-    return c
 
 def exponential_smooth(V, c, Vmax):
     """
-    Exponentële afvlakkende groeimodel.
+    Exponentële afvlakkende groeimodel
 
     V = huidig tumorvolume
     c = groeiparameter
@@ -37,9 +41,10 @@ def exponential_smooth(V, c, Vmax):
     """
     return c * (Vmax - V)
 
+
 def logistic(V, c, Vmax):
     """
-    Logistische groeimodel.
+    Logistische groeimodel
 
     V = huidig tumorvolume
     c = groeiparameter
@@ -47,9 +52,10 @@ def logistic(V, c, Vmax):
     """
     return c * V * (Vmax - V)
 
+
 def montroll(V, c, d, Vmax):
     """
-    Montroll groeimodel.
+    Montroll groeimodel
 
     V = huidig tumorvolume
     c = groeiparameter
@@ -58,9 +64,10 @@ def montroll(V, c, d, Vmax):
     """
     return c * V * (Vmax**d - V**d)
 
+
 def allee_effect(V, c, Vmin, Vmax):
     """
-    Alle effect groeimodel.
+    Alle effect groeimodel
 
     V = huidig tumorvolume
     c = groeiparameter
