@@ -19,7 +19,7 @@ def exponential(V, c):
     """
     return c * V
 
-def linear(c):
+def linear(V, c):
     """
     Lineaire groeimodel.
 
@@ -27,7 +27,7 @@ def linear(c):
     """
     return c
 
-def exponential_smooth(c, V, Vmax):
+def exponential_smooth(V, c, Vmax):
     """
     Exponentële afvlakkende groeimodel.
 
@@ -37,7 +37,7 @@ def exponential_smooth(c, V, Vmax):
     """
     return c * (Vmax - V)
 
-def logistic(c, V, Vmax):
+def logistic(V, c, Vmax):
     """
     Logistische groeimodel.
 
@@ -47,7 +47,7 @@ def logistic(c, V, Vmax):
     """
     return c * V * (Vmax - V)
 
-def montroll(c, V, d, Vmax):
+def montroll(V, c, d, Vmax):
     """
     Montroll groeimodel.
 
@@ -58,7 +58,7 @@ def montroll(c, V, d, Vmax):
     """
     return c * V * (Vmax**d - V**d)
 
-def allee_effect(c, V, Vmin, Vmax):
+def allee_effect(V, c, Vmin, Vmax):
     """
     Alle effect groeimodel.
 
