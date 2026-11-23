@@ -1,7 +1,7 @@
 
 import numpy as np
 from random import gauss
-from tumor_models.solvers import euler_solver
+from tumor_models.solver_euler import euler_solver
 
 
 def bereken_mse(model, parameters, V0, t_start, meetdagen, meetwaarden, dt=0.1):

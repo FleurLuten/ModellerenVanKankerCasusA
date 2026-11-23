@@ -1,5 +1,6 @@
 # De monte carlo voor optimisatie
 
+import math
 from random import gauss
 
 
@@ -49,6 +50,10 @@ def random_search_monte_carlo(t_data, V_data, model, solver, dt=1, **start_param
             new_error += difference ** 2
 
         new_error = new_error / len(t_data)
+
+        # Controleren of de nieuwe fout een geldig getal is
+        if not math.isfinite(new_error):
+            continue
 
         if new_error < error:
             params = new_params

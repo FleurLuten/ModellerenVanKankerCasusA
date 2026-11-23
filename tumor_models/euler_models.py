@@ -23,27 +23,27 @@ def exponential_euler(V, c):
 
 # Linear
 def linear_euler(V, c):
-    return linear(c)
+    return linear(V, c)
 
 
 # Exponential smooth
 def exponential_smooth_euler(V, c, Vmax):
-    return exponential_smooth(c, V, Vmax)
+    return exponential_smooth(V, c, Vmax)
 
 
 # Logistic
 def logistic_euler(V, c, Vmax):
-    return logistic(c, V, Vmax)
+    return logistic(V, c, Vmax)
 
 
 # Montroll
 def montroll_euler(V, c, d, Vmax):
-    return montroll(c, V, d, Vmax)
+    return montroll(V, c, d, Vmax)
 
 
 # Allee effect
 def allee_effect_euler(V, c, Vmin, Vmax):
-    return allee_effect(c, V, Vmin, Vmax)
+    return allee_effect(V, c, Vmin, Vmax)
 
 
 # Overzicht van alle modellen
