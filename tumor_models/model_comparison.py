@@ -49,8 +49,7 @@ def calculate_bic(error, n, k):
     return n * log(error) + k * log(n)
 
 
-def compare_models(t_data, V_data, models, solvers,
-                   start_parameters, dt=1):
+def compare_models(t_data, V_data, models, solvers, start_parameters, dt=1):
     """
     Vergelijk de verschillende tumorgroeimodellen en solvers
 

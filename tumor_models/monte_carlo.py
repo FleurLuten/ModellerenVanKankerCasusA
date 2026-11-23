@@ -16,7 +16,7 @@ def random_search_monte_carlo(t_data, V_data, model, solver, dt=1, **start_param
     **start_params = De beginwaarden van de parameters van het groeimodel
 
     Returns
-    error = De gemiddelde kwadraat fout tussen de gemeten en berekende tumorvolumes
+    error = De gemiddelde kwadratische fout tussen de gemeten en berekende tumorvolumes
     params = De parameters die de kleinste fout opleverden
     """
 
