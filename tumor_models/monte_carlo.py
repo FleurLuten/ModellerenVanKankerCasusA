@@ -1,5 +1,5 @@
 # De monte carlo voor optimisatie
-
+import math
 from random import gauss
 
 
@@ -25,11 +25,20 @@ def random_search_monte_carlo(t_data, V_data, model, solver, dt=1, **start_param
 
     times, predicted_volumes = solver(model, V_data[0], t_data[0], t_data[-1], dt, parameters)
     error = 0
+    invalid = False
 
     for i in range(len(t_data)):
         index = int(round((t_data[i] - t_data[0]) / dt))
         difference = V_data[i] - predicted_volumes[index]
+
+        if not math.isfinite(difference) or abs(difference) > 1e100:
+            invalid = True
+            break
+
         error += difference ** 2
+
+    if invalid:
+        return float("inf"), params
 
     error = error / len(t_data)
     tries = 0
@@ -42,11 +51,20 @@ def random_search_monte_carlo(t_data, V_data, model, solver, dt=1, **start_param
         new_parameters = list(new_params.values())
         times, predicted_volumes = solver(model, V_data[0], t_data[0], t_data[-1], dt, new_parameters)
         new_error = 0
+        invalid = False
 
         for i in range(len(t_data)):
             index = int(round((t_data[i] - t_data[0]) / dt))
             difference = V_data[i] - predicted_volumes[index]
+
+            if not math.isfinite(difference) or abs(difference) > 1e100:
+                invalid = True
+                break
+
             new_error += difference ** 2
+
+        if invalid:
+            continue
 
         new_error = new_error / len(t_data)
 
